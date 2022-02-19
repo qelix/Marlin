@@ -1,4 +1,8 @@
-# Marlin 3D Printer Firmware
+# My Marlin configuration for Anet A8 running on an SKR Mini e3 V1.2 board
+
+This repo contains configuration changes for my printer to allow for easy merging of new Marlin releases.
+
+## Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
