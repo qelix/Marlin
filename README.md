@@ -2,6 +2,14 @@
 
 This repo contains configuration changes for my printer to allow for easy merging of new Marlin releases.
 
+## Automatic Flashing
+
+Flashing the firmware automatically is possible but very specific to my setup. Use `Ctrl+Shift+B` to execute the default built task which is configured to run a PlatformIO build, followed by running `flash-firmware.sh`.
+
+This script `scp`s the latest build to the home directory of my Pi, mounts the printer's SD card, moves the firmware there, and unmounts the card again. All values are hardcoded, the directory ~/mountpoint needs to exist (glorious name, I know), passwordless sudo is required (enabled by default on Raspbian), SSH-key-based authentication is assumed, and the whole thing doesn't check for a single error. But hey, the happy path works!
+
+After copying, a manual reset of the board is required for it to actually flash the firmware.
+
 ## Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)

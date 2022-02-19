@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flash Built Firmware",
+            "command": "${workspaceFolder}/flash-firmware.sh",
+            "type": "shell"
+        },
+        {
+            "label": "Build and Flash Firmware",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "PlatformIO: Build",
+                "Flash Built Firmware"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
